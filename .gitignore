@@ -1,0 +1,21 @@
+# Unity / Visual Studio generated files
+.vs/
+.vsconfig
+Library/
+Temp/
+obj/
+Logs/
+UserSettings/
+ProjectSettings/BuildSettings.asset
+
+# Ignore system files
+*.vsidx
+*.user
+*.suo
+*.tmp
+*.log
+
+# Ignore build outputs
+*.exe
+*.dll
+*.pdb

@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "id": "Item_Food_01", "name": "Riz", "quantity": 5, "warningThreshold": 10 },
+    { "id": "Item_Electronics_01", "name": "Iphone 17", "quantity": 0, "warningThreshold": 10 },
+    { "id": "Item_Clothes_01", "name": "Tshirt Prada", "quantity": 25, "warningThreshold": 10 }
+  ]
+}
