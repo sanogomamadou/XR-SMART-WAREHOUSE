@@ -15,6 +15,7 @@ public class WarehouseJsonItem
     public string name;
     public int quantity;
     public int warningThreshold;
+    public string category; 
 }
 
 public class DataManager : MonoBehaviour

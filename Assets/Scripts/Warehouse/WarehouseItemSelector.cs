@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro; // tr�s important !
+using TMPro;
 
 public class WarehouseItemSelector : MonoBehaviour
 {
@@ -11,7 +11,13 @@ public class WarehouseItemSelector : MonoBehaviour
     public TMP_Text quantityText;
     public TMP_Text statusText;
 
+    [Header("Feedback sélection")]
+    public float liftHeight = 0.3f;
+
     private WarehouseItem selectedItem;
+    private WarehouseItem lastItem;
+
+    private Vector3 lastItemOriginalPos;
 
     public WarehouseItem SelectedItem => selectedItem;
 
@@ -40,7 +46,30 @@ public class WarehouseItemSelector : MonoBehaviour
 
     void SelectItem(WarehouseItem item)
     {
+        // RESET ancien item
+        if (lastItem != null)
+        {
+            lastItem.transform.position = lastItemOriginalPos;
+
+            Transform oldOutline = lastItem.transform.Find("Outline");
+            if (oldOutline != null)
+                oldOutline.gameObject.SetActive(false);
+        }
+
+        // NOUVEL item
         selectedItem = item;
+        lastItem = selectedItem;
+
+        lastItemOriginalPos = selectedItem.transform.position;
+
+        // Surélévation
+        selectedItem.transform.position += Vector3.up * liftHeight;
+
+        // Activer outline
+        Transform outline = selectedItem.transform.Find("Outline");
+        if (outline != null)
+            outline.gameObject.SetActive(true);
+
         UpdateUI();
     }
 
@@ -49,8 +78,8 @@ public class WarehouseItemSelector : MonoBehaviour
         if (selectedItem != null)
         {
             itemNameText.text = "Nom : " + selectedItem.itemName;
-            quantityText.text = "Quantit� : " + selectedItem.quantity;
-            statusText.text = "Statut : " + selectedItem.status.ToString();
+            quantityText.text = "Quantité : " + selectedItem.quantity;
+            statusText.text = "Statut : " + selectedItem.status;
         }
     }
 }

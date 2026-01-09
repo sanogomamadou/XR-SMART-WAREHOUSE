@@ -1,7 +1,13 @@
 {
   "items": [
-    { "id": "Item_Food_01", "name": "Riz", "quantity": 5, "warningThreshold": 10 },
-    { "id": "Item_Electronics_01", "name": "Iphone 17", "quantity": 0, "warningThreshold": 10 },
-    { "id": "Item_Clothes_01", "name": "Tshirt Prada", "quantity": 25, "warningThreshold": 10 }
+    { "id": "Item_Food_01", "name": "Riz", "quantity": 5, "warningThreshold": 10, "category": "Food" },
+    { "id": "Item_Food_03", "name": "Petits pois", "quantity": 8, "warningThreshold": 10, "category": "Food" },
+    { "id": "Item_Food_02", "name": "Pâtes", "quantity": 8, "warningThreshold": 10, "category": "Food" },
+    { "id": "Item_Electronics_01", "name": "Iphone 17", "quantity": 0, "warningThreshold": 10, "category": "Electronics" },
+    { "id": "Item_Electronics_03", "name": "Casque JBL", "quantity": 0, "warningThreshold": 10, "category": "Electronics" },
+    { "id": "Item_Electronics_02", "name": "Laptop Gamer", "quantity": 3, "warningThreshold": 5, "category": "Electronics" },
+    { "id": "Item_Clothes_01", "name": "Tshirt Prada", "quantity": 25, "warningThreshold": 10, "category": "Clothes" },
+    { "id": "Item_Clothes_03", "name": "Veste Zara", "quantity": 25, "warningThreshold": 10, "category": "Clothes" },
+    { "id": "Item_Clothes_02", "name": "Jean Levi's", "quantity": 12, "warningThreshold": 10, "category": "Clothes" }
   ]
 }
